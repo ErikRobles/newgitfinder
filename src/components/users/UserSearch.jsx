@@ -20,7 +20,7 @@ const UserSearch = () => {
     } else {
       dispatch({ type: 'SET_LOADING' });
       const users = await searchUsers(text);
-      dispatch({ type: 'GET_USER_AND_REPOS', payload: users });
+      dispatch({ type: 'GET_USERS', payload: users });
       setText('');
     }
   };
